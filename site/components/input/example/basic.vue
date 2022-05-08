@@ -1,13 +1,13 @@
 <template>
-  <l-button>Basic</l-button>
+  <l-input />
 </template>
 
 <script lang="ts">
-import { LButton } from 'lu-ui'
+import { LInput } from 'lu-ui'
 
 export default {
   components: {
-    LButton,
+    LInput,
   },
 }
 </script>

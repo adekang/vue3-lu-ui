@@ -8,9 +8,11 @@
   "author": "adekang",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
     "site": "pnpm --filter=site dev",
-    "site:build": "pnpm --filter=site build"
+    "site:build": "pnpm --filter=site build",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint:lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue": "^3.2.33"

@@ -6,12 +6,12 @@ export default defineComponent({
   props: {
     type: {
       type: String as PropType<'default' | 'primary'>,
-      default: 'default'
-    }
+      default: 'default',
+    },
   },
   setup(_props, { slots }) {
     return () => {
       return <button>{slots.default && slots.default()}</button>
     }
-  }
+  },
 })
