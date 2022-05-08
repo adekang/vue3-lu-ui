@@ -1,16 +1,17 @@
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
+import type { PropType } from 'vue'
+import { defineComponent } from 'vue'
+
 export default defineComponent({
-  name: "LButton",
+  name: 'LButton',
   props: {
     type: {
-      type: String as PropType<"default" | "primary">,
-      default: "default",
-    },
+      type: String as PropType<'default' | 'primary'>,
+      default: 'default'
+    }
   },
   setup(_props, { slots }) {
     return () => {
-      return <button>{slots.default && slots.default()}</button>;
-    };
-  },
-});
+      return <button>{slots.default && slots.default()}</button>
+    }
+  }
+})
