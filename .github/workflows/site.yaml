@@ -4,6 +4,8 @@ on:
     tags:
       - site*
 
+permissions: write-all
+
 jobs:
   site:
     runs-on: ubuntu-latest
