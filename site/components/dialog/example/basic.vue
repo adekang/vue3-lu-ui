@@ -14,13 +14,12 @@
 </template>
 
 <script lang="ts">
-import { LButton, LDialog } from 'lu-ui'
+import { LDialog } from 'lu-ui'
 import { ref } from 'vue'
 
 export default {
   components: {
     LDialog,
-    LButton,
   },
   setup() {
     const x = ref(false)

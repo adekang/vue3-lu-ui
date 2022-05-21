@@ -29,6 +29,7 @@ export default defineUserConfig({
       plugins: [vueJsx()],
       resolve: {
         alias: {
+          "lu-ui/style": resolve(__dirname, "../../packages/ui/src/style.ts"),
           "lu-ui": resolve(__dirname, "../../packages/ui/src/index.ts"),
         },
       },

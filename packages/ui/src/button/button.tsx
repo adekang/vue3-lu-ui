@@ -1,5 +1,5 @@
 import type { PropType } from 'vue'
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'LButton',
@@ -10,8 +10,13 @@ export default defineComponent({
     },
   },
   setup(_props, { slots }) {
+    const prefixCls = 'ui-btn'
+    const cls = computed(() => ({
+      [prefixCls]: true,
+      [`${prefixCls}-${_props.type}`]: _props.type !== 'default',
+    }))
     return () => {
-      return <button>{slots.default && slots.default()}</button>
+      return <button class={cls.value}>{slots.default && slots.default()}</button>
     }
   },
 })

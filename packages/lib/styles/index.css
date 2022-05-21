@@ -1,0 +1,6 @@
+html {
+  --ui-primary-color: #1890ff;
+}
+html[data-theme='dark'] {
+  --ui-primary-color: #1a80df;
+}
