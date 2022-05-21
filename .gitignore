@@ -102,5 +102,5 @@ dist/
 tmp/
 temp/
 .idea/
-.vscode/!/packages/lib/
-!/packages/es/
+packages/lib/
+packages/es/
