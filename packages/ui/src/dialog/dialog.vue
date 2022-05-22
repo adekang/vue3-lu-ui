@@ -12,12 +12,8 @@
             <slot name="content" />
           </main>
           <footer>
-            <l-button type="primary" @click="onClickOk">
-              OK
-            </l-button>
-            <l-button type="primary" @click="onClickCancel">
-              Cancel
-            </l-button>
+            <l-button type="primary" @click="onClickOk"> OK </l-button>
+            <l-button type="primary" @click="onClickCancel"> Cancel </l-button>
           </footer>
         </div>
       </div>
@@ -45,14 +41,14 @@ export default defineComponent({
   props: {
     visible: {
       type: Boolean,
-      default: false,
+      default: false
     },
     closeOnclickOverlay: {
       type: Boolean,
-      default: false,
+      default: false
     },
     ok: Function,
-    cancel: Function,
+    cancel: Function
   },
   emits: ['update:visible'],
   setup(props: Props, context: Context) {
@@ -73,9 +69,9 @@ export default defineComponent({
       close,
       onClickOverlay,
       onClickOk,
-      onClickCancel,
+      onClickCancel
     }
-  },
+  }
 })
 </script>
 
@@ -135,7 +131,7 @@ $border-color: #d9d9d9;
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       height: 1px;
       background: black;

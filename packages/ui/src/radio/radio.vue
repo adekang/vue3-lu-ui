@@ -1,5 +1,8 @@
 <template>
-  <label class="beans-radio-wrapper" :class="{'beans-radio-checked': label === model}">
+  <label
+    class="beans-radio-wrapper"
+    :class="{ 'beans-radio-checked': label === model }"
+  >
     <span class="beans-radio">
       <input
         v-model="model"
@@ -7,8 +10,8 @@
         class="beans-radio-input"
         :value="label"
         :disabled="disabled"
-      >
-      <span class="beans-radio-inner" :class="disabled ?'disabled':'' " />
+      />
+      <span class="beans-radio-inner" :class="disabled ? 'disabled' : ''" />
     </span>
     <span class="beans-radio-label">
       <slot />
@@ -26,37 +29,30 @@ export default {
     value: null,
     label: {
       type: [String, Number, Boolean],
-      default: '',
+      default: ''
     },
     disabled: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   emits: ['update:value'],
   setup(props, context) {
     const model = computed({
       get() {
-        console.log(props.value)
         return props.value
       },
       set(value) {
         context.emit('update:value', value)
-      },
+      }
     })
 
     return { model }
-  },
+  }
 }
 </script>
 
 <style lang="scss">
-$beansYellow: #fff5eb;
-$beansBg: #fffcf9;
-$beansDeepYel: #ffa347;
-$box-shadow-color: rgba(255, 163, 71, 0.5);
-$beansFontColor:#333;
-
 $clickColor: #fc921e;
 .beans-radio-wrapper {
   color: #606266;
@@ -96,7 +92,7 @@ $clickColor: #fc921e;
         height: 8px;
         border-radius: 100%;
         background-color: #fff;
-        content: "";
+        content: '';
         position: absolute;
         left: 50%;
         top: 50%;
@@ -139,5 +135,4 @@ $clickColor: #fc921e;
     }
   }
 }
-
 </style>

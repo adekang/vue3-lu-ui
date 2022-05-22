@@ -16,7 +16,7 @@ export default {
   name: 'Switch',
   props: {
     value: Boolean,
-    disabled: Boolean,
+    disabled: Boolean
   },
   emits: ['update:value'],
   setup(props, context) {
@@ -24,17 +24,11 @@ export default {
       context.emit('update:value', !props.value)
     }
     return { toggle }
-  },
+  }
 }
 </script>
 
 <style lang="scss">
-$beansYellow: #fff5eb;
-$beansBg: #fffcf9;
-$beansDeepYel: #ffa347;
-$box-shadow-color: rgba(255, 163, 71, 0.5);
-$beansFontColor:#333;
-
 $h: 22px;
 $h2: $h - 4px;
 .beans-switch {
@@ -42,7 +36,7 @@ $h2: $h - 4px;
   width: $h * 2;
   border: none;
   background: #bfbfbf;
-  border-radius:calc($h / 2);
+  border-radius: calc($h / 2);
   position: relative;
 
   > span {

@@ -6,21 +6,21 @@ const Button = defineComponent({
   props: {
     type: {
       type: String as PropType<'default' | 'primary'>,
-      default: 'default',
-    },
+      default: 'default'
+    }
   },
   setup(_props, { slots }) {
     const prefixCls = 'ui-btn'
     const cls = computed(() => ({
       [prefixCls]: true,
-      [`${prefixCls}-${_props.type}`]: _props.type !== 'default',
+      [`${prefixCls}-${_props.type}`]: _props.type !== 'default'
     }))
     return () => {
       return (
         <button class={cls.value}>{slots.default && slots.default()}</button>
       )
     }
-  },
+  }
 })
 
 export default Button

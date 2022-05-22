@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
+
 export default defineConfig({
   build: {
     target: 'modules',
@@ -9,10 +10,7 @@ export default defineConfig({
     emptyOutDir: false,
     minify: false,
     rollupOptions: {
-      external: [
-        'vue',
-        '@adekang/utils',
-      ],
+      external: ['vue', '@adekang/utils'],
       input: ['src/index.ts'],
       output: [
         // esm
@@ -21,7 +19,7 @@ export default defineConfig({
           dir: 'es',
           entryFileNames: '[name].js',
           preserveModules: true,
-          preserveModulesRoot: 'src',
+          preserveModulesRoot: 'src'
         },
         // cjs
         {
@@ -29,19 +27,23 @@ export default defineConfig({
           dir: 'lib',
           entryFileNames: '[name].js',
           preserveModules: true,
-          preserveModulesRoot: 'src',
-        },
-      ],
+          preserveModulesRoot: 'src'
+        }
+      ]
     },
     // 这一块是不会被使用的
     lib: {
       entry: 'src/index.ts',
-      formats: ['es', 'cjs'],
-    },
+      formats: ['es', 'cjs']
+    }
   },
-  plugins: [
-    vue(),
-    vueJsx(),
-    dts(),
-  ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        charset: false, // 避免出现: build时的 @charset 必须在第一行的警告
+        additionalData: '@import "@/styles/_var.scss";'
+      }
+    }
+  },
+  plugins: [vue(), vueJsx(), dts()]
 })

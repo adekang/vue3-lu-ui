@@ -3,7 +3,9 @@
   "version": "1.0.1",
   "packageManager": "pnpm@7.0.0",
   "description": "",
-  "keywords": [],
+  "keywords": [
+    "lu-ui"
+  ],
   "license": "ISC",
   "author": "adekang",
   "main": "index.js",
@@ -25,6 +27,7 @@
     "@vitejs/plugin-vue-jsx": "^1.3.10",
     "@vue/test-utils": "^2.0.0-rc.21",
     "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
     "husky": "^7.0.4",
     "jsdom": "^19.0.0",
     "lint-staged": "^12.4.1",
@@ -34,7 +37,29 @@
     "vitest": "^0.9.4"
   },
   "lint-staged": {
-    "*.{ts,tsx,less,vue}": "eslint . --fix"
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.tsx": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.vue": [
+      "prettier --parser=vue --write",
+      "eslint --fix"
+    ],
+    "*.css": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write --parser markdown --prose-wrap never",
+      "eslint --fix"
+    ]
   },
   "resolutions": {
     "@babel/traverse": "7.17.9"
@@ -42,8 +67,14 @@
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
+        "@babel/core",
+        "postcss",
+        "rollup",
         "webpack"
-      ]
+      ],
+      "allowedVersions": {
+        "eslint": "^8.15.0"
+      }
     }
   }
 }
