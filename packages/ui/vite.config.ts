@@ -3,6 +3,9 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
 
+const atImport = require('postcss-import')
+const path = require('path')
+
 export default defineConfig({
   build: {
     target: 'modules',
@@ -41,8 +44,11 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         charset: false, // 避免出现: build时的 @charset 必须在第一行的警告
-        additionalData: '@import "@/styles/_var.scss";'
+        additionalData: '@import "@/styles/var.scss";'
       }
+    },
+    postcss: {
+      plugins: [atImport({ path: path.join(__dirname, 'src`') })]
     }
   },
   plugins: [vue(), vueJsx(), dts()]

@@ -87,6 +87,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../styles/var";
+
 $color: #333;
 $border-color: #d9d9d9;
 .beans-tabs {
