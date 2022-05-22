@@ -1,8 +1,8 @@
 import type { PropType } from 'vue'
 import { computed, defineComponent } from 'vue'
 
-export default defineComponent({
-  name: 'LButton',
+const Button = defineComponent({
+  name: 'Button',
   props: {
     type: {
       type: String as PropType<'default' | 'primary'>,
@@ -16,7 +16,11 @@ export default defineComponent({
       [`${prefixCls}-${_props.type}`]: _props.type !== 'default',
     }))
     return () => {
-      return <button class={cls.value}>{slots.default && slots.default()}</button>
+      return (
+        <button class={cls.value}>{slots.default && slots.default()}</button>
+      )
     }
   },
 })
+
+export default Button

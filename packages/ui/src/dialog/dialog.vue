@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import LButton from '../button'
+import { LButton } from '../button'
 
 interface Props {
   ok: () => boolean
@@ -39,49 +39,44 @@ interface Context {
   emit: (arg0: string, arg1: boolean) => void
 }
 
-export default defineComponent(
-  {
-    name: 'LDialog',
-    components: { LButton },
-    props: {
-      visible: {
-        type: Boolean,
-        default: false,
-      },
-      closeOnclickOverlay: {
-        type: Boolean,
-        default: false,
-      },
-      ok: Function,
-      cancel: Function,
+export default defineComponent({
+  name: 'LDialog',
+  components: { LButton },
+  props: {
+    visible: {
+      type: Boolean,
+      default: false,
     },
-    emits: ['update:visible'],
-    setup(props: Props, context: Context) {
-      const close = () => {
-        context.emit('update:visible', false)
-      }
-      const onClickOk = () => {
-        // 简写 props.ok?.() !== false
-        if (props.ok && props.ok() !== false)
-          close()
-      }
-      const onClickCancel = () => {
-        if (props.cancel && props.cancel() !== false)
-          close()
-      }
-      const onClickOverlay = () => {
-        if (props.closeOnclickOverlay)
-          close()
-      }
-      return {
-        close,
-        onClickOverlay,
-        onClickOk,
-        onClickCancel,
-      }
+    closeOnclickOverlay: {
+      type: Boolean,
+      default: false,
     },
+    ok: Function,
+    cancel: Function,
   },
-)
+  emits: ['update:visible'],
+  setup(props: Props, context: Context) {
+    const close = () => {
+      context.emit('update:visible', false)
+    }
+    const onClickOk = () => {
+      // 简写 props.ok?.() !== false
+      if (props.ok && props.ok() !== false) close()
+    }
+    const onClickCancel = () => {
+      if (props.cancel && props.cancel() !== false) close()
+    }
+    const onClickOverlay = () => {
+      if (props.closeOnclickOverlay) close()
+    }
+    return {
+      close,
+      onClickOverlay,
+      onClickOk,
+      onClickCancel,
+    }
+  },
+})
 </script>
 
 <style lang="scss">
@@ -140,7 +135,7 @@ $border-color: #d9d9d9;
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 1px;
       background: black;
