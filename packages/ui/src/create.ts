@@ -20,8 +20,6 @@ const create = ({
   components = [],
 }: LUiCreateOptions = {}): LUiInstance => {
   const installTargets: App[] = []
-  console.log(components)
-
   const registerComponent = (
     app: App,
     name: string,

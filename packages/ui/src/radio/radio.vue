@@ -21,7 +21,7 @@
 import { computed } from 'vue'
 
 export default {
-  name: 'LRadio',
+  name: 'Radio',
   props: {
     value: null,
     label: {

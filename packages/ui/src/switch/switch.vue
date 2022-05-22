@@ -13,7 +13,7 @@
 
 <script lang="ts">
 export default {
-  name: 'LSwitch',
+  name: 'Switch',
   props: {
     value: Boolean,
     disabled: Boolean,

@@ -40,7 +40,7 @@ interface Context {
 }
 
 export default defineComponent({
-  name: 'LDialog',
+  name: 'Dialog',
   components: { LButton },
   props: {
     visible: {

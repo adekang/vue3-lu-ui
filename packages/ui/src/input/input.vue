@@ -14,7 +14,7 @@
 import { computed } from 'vue'
 
 export default {
-  name: 'LInput',
+  name: 'Input',
   props: {
     placeholder: {
       type: String,
