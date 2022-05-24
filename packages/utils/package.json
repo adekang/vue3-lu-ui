@@ -13,7 +13,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "vue": "^3.2.33"
+    "vue": "^3.2.36"
   },
   "devDependencies": {
     "@vue/tsconfig": "^0.1.3",

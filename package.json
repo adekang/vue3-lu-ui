@@ -15,13 +15,13 @@
     "lint": "yarn run lint:fix && yarn run lint:style",
     "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "lint:lint-staged": "lint-staged",
-    "clean": "rimraf  packages/lib packages/es",
+    "clean": "rimraf  packages/ui/lib packages/ui/es packages/ui/dist",
     "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
     "clean:node_modules": "rimraf  node_modules packages/ui/node_modules packages/utils/node_modules site/node_modules",
     "prepare": "husky install"
   },
   "dependencies": {
-    "vue": "^3.2.33"
+    "vue": "^3.2.36"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.3.0",
@@ -29,8 +29,8 @@
     "@mistjs/eslint-config-vue": "^0.0.2",
     "@types/jsdom": "^16.2.14",
     "@vitejs/plugin-vue-jsx": "^1.3.10",
-    "@vue/test-utils": "^2.0.0-rc.21",
-    "eslint": "^8.15.0",
+    "@vue/test-utils": "^2.0.0",
+    "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^7.0.4",
     "jsdom": "^19.0.0",
