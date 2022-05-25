@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { LRadio } from 'lu-ui'
+import { LRadio } from '@adekang/lu-ui'
 import { ref } from 'vue'
 
 export default {

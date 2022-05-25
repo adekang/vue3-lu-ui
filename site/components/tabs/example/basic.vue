@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { LTab, LTabItem } from 'lu-ui'
+import { LTab, LTabItem } from '@adekang/lu-ui'
 import { ref } from 'vue'
 
 export default {

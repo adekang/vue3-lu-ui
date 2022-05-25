@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { LInput } from 'lu-ui'
+import { LInput } from '@adekang/lu-ui'
 
 export default {
   components: {

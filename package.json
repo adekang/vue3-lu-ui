@@ -8,7 +8,6 @@
   ],
   "license": "ISC",
   "author": "adekang",
-  "main": "index.js",
   "scripts": {
     "site": "pnpm --filter=site dev",
     "site:build": "pnpm --filter=site build",

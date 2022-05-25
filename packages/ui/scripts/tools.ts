@@ -10,5 +10,5 @@
 // export const ES_DIR = dir_path('../es')
 // export const LIB_DIR = dir_path('../lib')
 export const SRC_DIR = '../ui/src'
-export const ES_DIR = '../es'
-export const LIB_DIR = '../lib'
+export const ES_DIR = '../ui/es'
+export const LIB_DIR = '../ui/lib'

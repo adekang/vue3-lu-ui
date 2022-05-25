@@ -14,8 +14,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "lu-ui": ["../packages/ui/src/index.ts"],
-      "lu-ui/style": ["../packages/ui/src/style.ts"],
+      "@adekang/lu-ui": ["../packages/ui/src/index.ts"],
+      "@adekang/lu-ui/style": ["../packages/ui/src/style.ts"],
     }
   },
   "exclude": ["node_modules"]

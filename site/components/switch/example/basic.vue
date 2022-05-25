@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { LSwitch } from 'lu-ui'
+import { LSwitch } from '@adekang/lu-ui'
 import { ref } from 'vue'
 
 export default {

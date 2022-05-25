@@ -14,12 +14,12 @@
 </template>
 
 <script lang="ts">
-import { LDialog } from 'lu-ui'
+import { LDialog } from '@adekang/lu-ui'
 import { ref } from 'vue'
 
 export default {
   components: {
-    LDialog,
+    LDialog
   },
   setup() {
     const x = ref(false)
@@ -36,9 +36,9 @@ export default {
       x,
       toggle,
       f1,
-      f2,
+      f2
     }
-  },
+  }
 }
 
 </script>

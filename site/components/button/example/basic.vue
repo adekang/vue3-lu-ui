@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { LButton } from 'lu-ui'
+import { LButton } from '@adekang/lu-ui'
 
 export default {
   components: {
