@@ -7,11 +7,10 @@
     :class="classes"
     class="beans-input"
     @input="changeValue"
-  >
+  />
 </template>
 
 <script lang="ts">
-import { toDay } from '@adekang/utils'
 import { computed } from 'vue'
 
 export default {
@@ -32,7 +31,6 @@ export default {
   },
   emits: ['update:value'],
   setup(props, context) {
-    console.log(toDay())
     const { size } = props
     const changeValue = (e) => {
       context.emit('update:value', e.target.value)
