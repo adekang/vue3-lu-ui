@@ -6,7 +6,6 @@ const files = fg.sync('**/style/index.ts', {
   onlyFiles: true,
 })
 
-console.log("files::>",files)
 export default defineConfig({
   build: {
     target: 'modules',
