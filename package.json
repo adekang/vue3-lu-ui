@@ -17,7 +17,7 @@
     "clean": "rimraf  packages/ui/lib packages/ui/es packages/ui/dist",
     "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
     "clean:node_modules": "rimraf  node_modules packages/ui/node_modules packages/utils/node_modules site/node_modules",
-    "build": "npm run clean && npm run -F site build",
+    "build": "npm run clean && pnpm --filter=utils build && pnpm --filter=lu-ui build",
     "prepare": "husky install"
   },
   "dependencies": {
