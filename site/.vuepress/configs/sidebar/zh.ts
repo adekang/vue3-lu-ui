@@ -6,6 +6,7 @@ export const zh = {
     '/components/dialog/',
     '/components/switch/',
     '/components/tabs/',
-    '/components/radio/',
-  ]
+    '/components/radio/'
+  ],
+  '/about/': ['/about/']
 }
