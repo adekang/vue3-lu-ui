@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import { onMounted, ref, watchEffect } from 'vue'
-import Tab from './TabItem.vue'
+import Tab from './tabItem.vue'
 
 export default {
   name: 'Tab',
@@ -87,52 +87,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../styles/var";
 
-$color: #333;
-$border-color: #d9d9d9;
-.beans-tabs {
-  &-nav {
-    display: flex;
-    color: $color;
-    border-bottom: 1px solid $border-color;
-    position: relative;
-
-    &-item {
-      padding: 8px 0;
-      margin: 0 16px;
-      cursor: pointer;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &.selected {
-        color: $beansDeepYel;
-      }
-    }
-
-    &-indicator {
-      position: absolute;
-      height: 3px;
-      background: $beansDeepYel;
-      left: 0;
-      bottom: -1px;
-      width: 100px;
-      transition: all 250ms;
-    }
-  }
-
-  &-content {
-    padding: 8px 0;
-
-    &-item {
-      display: none;
-
-      &.selected {
-        display: block;
-      }
-    }
-  }
-}
 </style>

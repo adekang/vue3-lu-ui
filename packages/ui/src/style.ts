@@ -1,2 +1,6 @@
 import './button/style'
 import './input/style'
+import './radio/style'
+import './switch/style'
+import './tab/style'
+import './dialog/style'
