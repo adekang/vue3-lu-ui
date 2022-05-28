@@ -1,5 +1,5 @@
 # lu-ui
 
-# [关于](/about/)
+# [关于](/vue3-lu-ui/about/)
 
-# [组件](/components/)
+# [组件](/vue3-lu-ui/components/)
