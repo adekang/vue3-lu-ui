@@ -12,18 +12,21 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: 'Switch',
-  props: {
-    value: Boolean,
-    disabled: Boolean
-  },
-  emits: ['update:value'],
-  setup(props, context) {
-    const toggle = () => {
-      context.emit('update:value', !props.value)
-    }
-    return { toggle }
-  }
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'Switch'
+})
+</script>
+
+<script lang="ts" setup>
+const props = defineProps({
+  value: Boolean,
+  disabled: Boolean
+})
+
+const context = defineEmits(['update:value'])
+const toggle = () => {
+  context('update:value', !props.value)
 }
 </script>

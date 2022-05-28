@@ -12,8 +12,8 @@
             <slot name="content" />
           </main>
           <footer>
-            <l-button type="primary" @click="onClickOk"> OK </l-button>
-            <l-button type="primary" @click="onClickCancel"> Cancel </l-button>
+            <l-button type="primary" @click="onClickOk"> OK</l-button>
+            <l-button type="primary" @click="onClickCancel"> Cancel</l-button>
           </footer>
         </div>
       </div>
@@ -25,33 +25,25 @@
 import { defineComponent } from 'vue'
 import { LButton } from '../button'
 
-interface Props {
-  ok: () => boolean
-  cancel: () => boolean
-  closeOnclickOverlay: boolean
-}
-
-interface Context {
-  emit: (arg0: string, arg1: boolean) => void
+const Props = {
+  visible: {
+    type: Boolean,
+    default: false
+  },
+  closeOnclickOverlay: {
+    type: Boolean,
+    default: false
+  },
+  ok: Function,
+  cancel: Function
 }
 
 export default defineComponent({
   name: 'Dialog',
   components: { LButton },
-  props: {
-    visible: {
-      type: Boolean,
-      default: false
-    },
-    closeOnclickOverlay: {
-      type: Boolean,
-      default: false
-    },
-    ok: Function,
-    cancel: Function
-  },
+  props: Props,
   emits: ['update:visible'],
-  setup(props: Props, context: Context) {
+  setup(props, context: any) {
     const close = () => {
       context.emit('update:visible', false)
     }

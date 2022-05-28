@@ -30,10 +30,10 @@
 </template>
 
 <script lang="ts">
-import { onMounted, ref, watchEffect } from 'vue'
+import { defineComponent, onMounted, ref, watchEffect } from 'vue'
 import Tab from './tabItem.vue'
 
-export default {
+export default defineComponent({
   name: 'Tab',
   props: {
     selected: {
@@ -41,7 +41,7 @@ export default {
     }
   },
   emits: ['update:selected'],
-  setup(props, context) {
+  setup(props, context: any) {
     // 导航线条的移动
     const selectedItem = ref<HTMLDivElement>(null)
     const indicator = ref<HTMLDivElement>(null)
@@ -83,7 +83,7 @@ export default {
       container
     }
   }
-}
+})
 </script>
 
 <style lang="scss">

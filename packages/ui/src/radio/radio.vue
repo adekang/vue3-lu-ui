@@ -21,9 +21,9 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue'
+import { computed, defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
   name: 'Radio',
   props: {
     value: null,
@@ -49,6 +49,6 @@ export default {
 
     return { model }
   }
-}
+})
 </script>
 

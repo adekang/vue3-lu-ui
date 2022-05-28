@@ -11,9 +11,9 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue'
+import { computed, defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
   name: 'Input',
   props: {
     placeholder: {
@@ -45,5 +45,5 @@ export default {
       classes
     }
   }
-}
+})
 </script>
