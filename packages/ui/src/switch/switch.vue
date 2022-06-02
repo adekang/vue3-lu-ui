@@ -1,8 +1,8 @@
 <template>
   <div>
     <button
-      class="beans-switch"
-      :class="{ 'beans-checked': value }"
+      class="lu-switch"
+      :class="{ 'lu-checked': value }"
       :disabled="disabled"
       @click="toggle"
     >

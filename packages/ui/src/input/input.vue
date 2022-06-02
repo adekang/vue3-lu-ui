@@ -5,7 +5,7 @@
     :value="title"
     :disabled="disabled"
     :class="classes"
-    class="beans-input"
+    class="lu-input"
     @input="changeValue"
   />
 </template>

@@ -1,19 +1,19 @@
 <template>
   <label
-    class="beans-radio-wrapper"
-    :class="{ 'beans-radio-checked': label === model }"
+    class="lu-radio-wrapper"
+    :class="{ 'lu-radio-checked': label === model }"
   >
-    <span class="beans-radio">
+    <span class="lu-radio">
       <input
         v-model="model"
         type="radio"
-        class="beans-radio-input"
+        class="lu-radio-input"
         :value="label"
         :disabled="disabled"
       />
-      <span class="beans-radio-inner" :class="disabled ? 'disabled' : ''" />
+      <span class="lu-radio-inner" :class="disabled ? 'disabled' : ''" />
     </span>
-    <span class="beans-radio-label">
+    <span class="lu-radio-label">
       <slot />
       <template v-if="!$slots.default">{{ label }}</template>
     </span>
@@ -51,4 +51,3 @@ export default defineComponent({
   }
 })
 </script>
-

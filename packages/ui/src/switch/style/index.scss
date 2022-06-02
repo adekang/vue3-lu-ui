@@ -2,7 +2,8 @@
 
 $h: 22px;
 $h2: $h - 4px;
-.beans-switch {
+
+.#{$ui-prefix}-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -21,12 +22,12 @@ $h2: $h - 4px;
     transition: all 250ms;
   }
 
-  &.beans-checked {
+  &.#{$ui-prefix}-checked {
     background: $beansDeepYel;
   }
 
-  &.beans-checked > span {
-    left: calc(100% - #{$h2} - 2px);
+  &.#{$ui-prefix}-checked > span {
+    left: calc(100% - $h2 - 2px);
   }
 
   &:focus {
@@ -39,7 +40,7 @@ $h2: $h - 4px;
     }
   }
 
-  &.beans-checked:active {
+  &.#{$ui-prefix}-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;

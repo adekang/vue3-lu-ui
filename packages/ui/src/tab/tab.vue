@@ -1,6 +1,6 @@
 <template>
-  <div class="beans-tabs">
-    <div ref="container" class="beans-tabs-nav">
+  <div class="lu-tabs">
+    <div ref="container" class="lu-tabs-nav">
       <div
         v-for="(t, index) in titles"
         :ref="
@@ -10,19 +10,19 @@
         "
         :key="index"
         :class="{ selected: t === selected }"
-        class="beans-tabs-nav-item"
+        class="lu-tabs-nav-item"
         @click="select(t)"
       >
         {{ t }}
       </div>
-      <div ref="indicator" class="beans-tabs-nav-indicator" />
+      <div ref="indicator" class="lu-tabs-nav-indicator" />
     </div>
-    <div class="beans-tabs-content">
+    <div class="lu-tabs-content">
       <component
         :is="c"
         v-for="(c, index) in defaults"
         :key="index"
-        class="beans-tabs-content-item"
+        class="lu-tabs-content-item"
         :class="{ selected: c.props.title === selected }"
       />
     </div>
@@ -85,7 +85,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss">
-
-</style>

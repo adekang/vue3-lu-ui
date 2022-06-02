@@ -1,12 +1,12 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-      <div class="beans-dialog-overlay" @click="onClickOverlay" />
-      <div class="beans-dialog-wrapper">
-        <div class="beans-dialog">
+      <div class="lu-dialog-overlay" @click="onClickOverlay" />
+      <div class="lu-dialog-wrapper">
+        <div class="lu-dialog">
           <header>
             <slot name="title" />
-            <span class="beans-dialog-close" @click="close" />
+            <span class="lu-dialog-close" @click="close" />
           </header>
           <main>
             <slot name="content" />
@@ -66,4 +66,3 @@ export default defineComponent({
   }
 })
 </script>
-
