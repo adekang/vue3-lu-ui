@@ -1,0 +1,1 @@
+const e={key:"v-1020f180",path:"/components/",title:"\u7EC4\u4EF6\u9884\u89C8",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u5B89\u88C5\u7EC4\u4EF6\u5E93",slug:"\u5B89\u88C5\u7EC4\u4EF6\u5E93",children:[]}],git:{updatedTime:1654526534e3,contributors:[{name:"adekang",email:"adekang@163.com",commits:1}]},filePathRelative:"components/index.md"};export{e as data};

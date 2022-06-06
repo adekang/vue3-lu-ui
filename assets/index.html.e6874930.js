@@ -1,0 +1,1 @@
+const a={key:"v-8daa1a0e",path:"/",title:"lu-ui",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1654526534e3,contributors:[{name:"adekang",email:"adekang@163.com",commits:1}]},filePathRelative:"README.md"};export{a as data};

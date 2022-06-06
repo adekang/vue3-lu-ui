@@ -1,0 +1,1 @@
+const e={key:"v-64ecb8e5",path:"/components/input/",title:"Input",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1654526534e3,contributors:[{name:"adekang",email:"adekang@163.com",commits:1}]},filePathRelative:"components/input/index.md"};export{e as data};

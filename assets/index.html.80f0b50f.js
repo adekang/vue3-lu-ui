@@ -1,0 +1,1 @@
+const e={key:"v-26cb7ca7",path:"/components/dialog/",title:"Dialog",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1654526534e3,contributors:[{name:"adekang",email:"adekang@163.com",commits:1}]},filePathRelative:"components/dialog/index.md"};export{e as data};
