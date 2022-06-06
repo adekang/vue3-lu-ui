@@ -10,7 +10,7 @@ const Button = defineComponent({
     }
   },
   setup(_props, { slots }) {
-    const prefixCls = 'ui-btn'
+    const prefixCls = 'lu-btn'
     const cls = computed(() => ({
       [prefixCls]: true,
       [`${prefixCls}-${_props.type}`]: _props.type !== 'default'

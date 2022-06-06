@@ -37,7 +37,7 @@ export default defineComponent({
     }
     const classes = computed(() => {
       return {
-        [`beans-size-${size}`]: size
+        [`lu-size-${size}`]: size
       }
     })
     return {
